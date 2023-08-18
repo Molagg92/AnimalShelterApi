@@ -1,9 +1,18 @@
+using System;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using System.Security.Claims;
+using System.IdentityModel.Tokens.Jwt;
 using AnimalShelterApi.Models;
 
 namespace AnimalShelterApi.Controllers
 {
+  [Authorize]
   [Route("api/[controller]")]
   [ApiController]
   public class DogsController : ControllerBase
@@ -91,6 +100,39 @@ namespace AnimalShelterApi.Controllers
       await _db.SaveChangesAsync();
 
       return NoContent();
+    }
+    [HttpGet("GetToken")]
+    [AllowAnonymous]
+    public ActionResult GetToken()
+    {
+      var accessToken = GenerateJSONWebToken();
+
+      return Ok(accessToken);
+    }
+
+    private string GenerateJSONWebToken()
+    {
+      var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MynameisJamesBond007MynameisJamesBond007MynameisJamesBond007"));
+      var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+  
+      var token = new JwtSecurityToken(
+          issuer: "https://www.yogihosting.com",
+          audience: "https://www.yogihosting.com",
+          expires: DateTime.Now.AddHours(3),
+          signingCredentials: credentials
+          );
+  
+      return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+    
+    private void SetJWTCookie(string token)
+    {
+        var cookieOptions = new CookieOptions
+        {
+            HttpOnly = true,
+            Expires = DateTime.UtcNow.AddHours(3),
+        };
+        Response.Cookies.Append("jwtCookie", token, cookieOptions);
     }
 
   }

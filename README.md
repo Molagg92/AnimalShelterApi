@@ -1,6 +1,6 @@
 # _It's Raining Cats n' Dogs!_
 
-#### _A nifty web tool I made to help an expanding modern bakery_
+#### _An attempt to create an API using an Animal Shelter_
 
 #### By Erik Z./Molagg92
 
@@ -18,28 +18,32 @@
 * _POST: `http://localhost:5000/api/Cats`_
 * _PUT: `http://localhost:5000/api/Cats/{id}`_
 * _DELETE: `http://localhost:5000/api/Cats/{id}`_
+* _GET: `http://localhost:5000/api/Cats/GetToken`_
 
 * _GET: `http://localhost:5000/api/Dogs`_
 * _GET: `http://localhost:5000/api/Dogs/{id}`_
 * _POST: `http://localhost:5000/api/Dogs`_
 * _PUT: `http://localhost:5000/api/Dogs/{id}`_
 * _DELETE: `http://localhost:5000/api/Dogs/{id}`_
+* _GET: `http://localhost:5000/api/Dogs/GetToken`_
 * _``_
 
 ## Description
 
-_Users can register an account and keep track of wich treats and pastries they want to go with witch ever flavor! Full CRUD on both ends!_
+_ For the most part, it has CRUD on both Cat and Dog side, Supposed to simulate an app for an Animal Shleter!_
 
 ## Setup/Installation Requirements
 
-* _Clone "Week5CodeReview“ from the repository to your desktop_
-* _Navigate to the Week5CodeReview folder in your terminal_
-* _Once inside the project folder "Bakery", build an appsettings.json file, copy the following into it (replace the password with your server MySQL server passwor)_
-* ```{
+* _Clone "AnimalShelterApi" from the repository to your desktop_
+* _Navigate to the AnimalShelterApi folder in your terminal_
+* _Once inside the project folder "AnimalShelterApi", build an appsettings.json file, copy the following into it (replace the password with your server MySQL server password)_
+* ```
+{
     "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=week5codereview;uid=root;pwd=[!Yourpassword!];"
+      "DefaultConnection": "Server=localhost;Port=3306;database=animalshelterapi;uid=root;pwd=[!Yourpassword!];"
     }
-  } ```
+  }
+
 * _After this, give commane `$ dotnet ef database update` for the databade_ 
 * _Then type `dotnet build` in your terminal to make sure everything is up to date and there are no errors_
 * _Then launch the webpage by typing `dotnet watch run --launch-profile "production"` in the teminal_
@@ -47,7 +51,7 @@ _Users can register an account and keep track of wich treats and pastries they w
 
 ## Known Bugs
 
-* _No known bugs as of 8/14/2023_
+* _ Curretly this App doesnt not fully support JWT user auntentication/authorization. The app features full crud, and when checked through Postman the app correctly return 401 unauthorized error, but unfortunatly the keys tokens that are generated with /gettoken do not work, the user still gets the 401 unathorize error. making the epp a little unusable 8/18/2023_
 
 ## License
 
