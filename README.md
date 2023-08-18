@@ -8,8 +8,6 @@
 
 * _C#_
 * _.NET v6.0_
-* _MSTest.TestAdapter v2.2.10_
-* _MSTest.TestFramework v2.2.10_
 * _Git_
 * _VSCode_
 
@@ -19,11 +17,13 @@
 * _GET: `http://localhost:5000/api/Cats/{id}`_
 * _POST: `http://localhost:5000/api/Cats`_
 * _PUT: `http://localhost:5000/api/Cats/{id}`_
+* _DELETE: `http://localhost:5000/api/Cats/{id}`_
 
 * _GET: `http://localhost:5000/api/Dogs`_
 * _GET: `http://localhost:5000/api/Dogs/{id}`_
 * _POST: `http://localhost:5000/api/Dogs`_
 * _PUT: `http://localhost:5000/api/Dogs/{id}`_
+* _DELETE: `http://localhost:5000/api/Dogs/{id}`_
 * _``_
 
 ## Description
