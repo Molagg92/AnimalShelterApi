@@ -17,7 +17,11 @@
 
 * _GET: `http://localhost:5000/api/Cats`_
 * _GET: `http://localhost:5000/api/Cats/{id}`_
-* _``_
+* _POST: `http://localhost:5000/api/Cats`_
+
+* _GET: `http://localhost:5000/api/Dogs`_
+* _GET: `http://localhost:5000/api/Dogs/{id}`_
+* _POST: `http://localhost:5000/api/Dogs`_
 * _``_
 
 ## Description
