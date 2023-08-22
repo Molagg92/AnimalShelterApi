@@ -19,14 +19,12 @@
 * _PUT: `http://localhost:5000/api/Cats/{id}`_
 * _DELETE: `http://localhost:5000/api/Cats/{id}`_
 * _GET: `http://localhost:5000/api/Cats/GetToken`_
-===
 * _GET: `http://localhost:5000/api/Dogs`_
 * _GET: `http://localhost:5000/api/Dogs/{id}`_
 * _POST: `http://localhost:5000/api/Dogs`_
 * _PUT: `http://localhost:5000/api/Dogs/{id}`_
 * _DELETE: `http://localhost:5000/api/Dogs/{id}`_
 * _GET: `http://localhost:5000/api/Dogs/GetToken`_
-* _``_
 
 ## Description
 
