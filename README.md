@@ -19,7 +19,7 @@
 * _PUT: `http://localhost:5000/api/Cats/{id}`_
 * _DELETE: `http://localhost:5000/api/Cats/{id}`_
 * _GET: `http://localhost:5000/api/Cats/GetToken`_
-
+===
 * _GET: `http://localhost:5000/api/Dogs`_
 * _GET: `http://localhost:5000/api/Dogs/{id}`_
 * _POST: `http://localhost:5000/api/Dogs`_
@@ -30,20 +30,20 @@
 
 ## Description
 
-_ For the most part, it has CRUD on both Cat and Dog side, Supposed to simulate an app for an Animal Shleter!_
+_For the most part, it has CRUD on both Cat and Dog side, Supposed to simulate an app for an Animal Shleter!_
 
 ## Setup/Installation Requirements
 
 * _Clone "AnimalShelterApi" from the repository to your desktop_
 * _Navigate to the AnimalShelterApi folder in your terminal_
 * _Once inside the project folder "AnimalShelterApi", build an appsettings.json file, copy the following into it (replace the password with your server MySQL server password)_
-* ```
-{
-    "ConnectionStrings": {
+* 
+ ``` 
+    {"ConnectionStrings": {
       "DefaultConnection": "Server=localhost;Port=3306;database=animalshelterapi;uid=root;pwd=[!Yourpassword!];"
     }
   }
-
+```
 * _After this, give commane `$ dotnet ef database update` for the databade_ 
 * _Then type `dotnet build` in your terminal to make sure everything is up to date and there are no errors_
 * _Then launch the webpage by typing `dotnet watch run --launch-profile "production"` in the teminal_
@@ -51,7 +51,7 @@ _ For the most part, it has CRUD on both Cat and Dog side, Supposed to simulate 
 
 ## Known Bugs
 
-* _ Curretly this App doesnt not fully support JWT user auntentication/authorization. The app features full crud, and when checked through Postman the app correctly return 401 unauthorized error, but unfortunatly the keys tokens that are generated with /gettoken do not work, the user still gets the 401 unathorize error. making the epp a little unusable 8/18/2023_
+* _Curretly this App doesnt not fully support JWT user auntentication/authorization. The app features full crud, and when checked through Postman the app correctly return 401 unauthorized error, but unfortunatly the keys tokens that are generated with /gettoken do not work, the user still gets the 401 unathorize error. making the epp a little unusable 8/18/2023_
 
 ## License
 
