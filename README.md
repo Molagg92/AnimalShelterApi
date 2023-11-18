@@ -49,7 +49,7 @@ _For the most part, it has CRUD on both Cat and Dog side, Supposed to simulate a
 
 ## Known Bugs
 
-* _Curretly this App doesnt not fully support JWT user auntentication/authorization. The app features full crud, and when checked through Postman the app correctly return 401 unauthorized error, but unfortunatly the keys tokens that are generated with /gettoken do not work, the user still gets the 401 unathorize error. making the epp a little unusable 8/18/2023_
+* _No known bugs, If any are found by a user, please inform me at e92zambrano@outlook.com_
 
 ## License
 
